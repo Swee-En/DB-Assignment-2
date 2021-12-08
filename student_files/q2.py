@@ -22,7 +22,7 @@ Temp_Table2.filter(col("Price Range").isNotNull())\
     .groupBy("Price Range")\
         .agg({"Rating": "min"})
 
-t1.join(t2, ['Name'])\
+Temp_Table1.join(Temp_Table2, ['Name'])\
     .groupBy("Price Range")\
     .write.csv("Q2_answer.csv")
 
